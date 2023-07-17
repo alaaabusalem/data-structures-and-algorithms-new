@@ -38,6 +38,21 @@
 			Console.WriteLine("the queue contain after the second Dequeue:");
 			queue.Dequeue();
 			queue.Print();
+			///Pesedo
+			Console.WriteLine("pseudoQueue");
+			PseudoQueue<int> pseudoQueue= new PseudoQueue<int>();
+          pseudoQueue.Enqueue(1);
+			pseudoQueue.Enqueue(2);
+			pseudoQueue.Enqueue(3);
+			pseudoQueue.Enqueue(4);
+			pseudoQueue.Print();
+			Console.WriteLine("pseudoQueue");
+			pseudoQueue.Dequeue();
+			pseudoQueue.Print();
+			Console.WriteLine("pseudoQueue");
+			pseudoQueue.Dequeue();
+			pseudoQueue.Print();
+
 
 
 		}
