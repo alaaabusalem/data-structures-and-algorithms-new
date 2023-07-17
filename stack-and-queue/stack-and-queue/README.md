@@ -13,3 +13,11 @@ with a Generic Node class, then creat a xUnit project to test each function
 ![1](CC-10-11.jpg)
 
 ![2](CC-10-22.jpg)
+
+# CC 11 PseduoQueue
+
+I finished the PseudoQueue Class with a Unit test successfully.
+
+![1](CC11-1.jpg)
+
+![2](CC11-2.jpg)

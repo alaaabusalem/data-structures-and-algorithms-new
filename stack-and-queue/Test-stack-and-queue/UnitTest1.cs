@@ -1,3 +1,4 @@
+using System.Collections;
 using System.Collections.Generic;
 using stack_and_queue;
 
@@ -166,4 +167,52 @@ namespace Test_stack_and_queue
 				queue.Peek();
 			});
 		}
+		/// CC11 PseudoQueue
+
+		[Fact]
+		void TestInstantiateAnPseudoQueue()
+		{
+			// Arrange
+			PseudoQueue<int> pseudoQueue = new PseudoQueue<int>();
+			// Act
+			// Assert
+			Assert.Throws<Exception>(() => {
+				pseudoQueue.Peek();
+		});
+		}
+
+		[Fact]
+		void TestEnqueuePseudoQueue()
+		{
+
+			// Arrange
+			PseudoQueue<int> pseudoQueue = new PseudoQueue<int>();
+			pseudoQueue.Enqueue(1);
+			pseudoQueue.Enqueue(2);
+			pseudoQueue.Enqueue(3);
+			// Act
+			var consoleOutput = new StringWriter();
+			Console.SetOut(consoleOutput);
+			// Assert
+			pseudoQueue.Print();
+			//Assert.Equal(pseudoQueue.Print(),"1-> 2-> 3-> ");
+			Assert.Contains("1-> 2-> 3-> ", consoleOutput.ToString());
+
+
+		}
+		[Fact]
+		void TestDequeueTheExpectedValuePseudoQueue()
+		{
+			// Arrange
+			PseudoQueue<int> pseudoQueue = new PseudoQueue<int>();
+			pseudoQueue.Enqueue(1);
+			pseudoQueue.Enqueue(2);
+			pseudoQueue.Enqueue(3);
+			// Act
+			int dequeue = pseudoQueue.Dequeue();
+			// Assert
+			Assert.Equal(dequeue, 1);
+		}
+
+
 	} } 
