@@ -213,6 +213,49 @@ namespace Test_stack_and_queue
 			// Assert
 			Assert.Equal(dequeue, 1);
 		}
+		[Fact]
+		void TestInstantiateAnEmptyAnimalShelter()
+		{
+			// Arrange
+			AnimalShelter animalShelter= new AnimalShelter();
 
+			// Act
+			Animal animal = animalShelter.Dequeue("dog")
+;			// Assert
+			Assert.Equal(animal, null);
+		}
+		[Fact]
+		void TestEnqueueThenDequeueCatAnimalShelter()
+		{
+			// Arrange
+			AnimalShelter animalShelter = new AnimalShelter();
+			animalShelter.Enqueue(new Animal("cat", "LeLe"));
+			animalShelter.Enqueue(new Animal("dog", "pepo"));
+			animalShelter.Enqueue(new Animal("cat", "Lolo"));
+			animalShelter.Enqueue(new Animal("cat", "Fefe"));
+			animalShelter.Enqueue(new Animal("dog", "Neno"));
+			// Act
+			Animal animal = animalShelter.Dequeue("cat");
+			string name = animal.Name;
+;           // Assert
+			Assert.Equal(name, "LeLe");
+		}
+
+		[Fact]
+		void TestEnqueueThenDequeueDogAnimalShelter()
+		{
+			// Arrange
+			AnimalShelter animalShelter = new AnimalShelter();
+			animalShelter.Enqueue(new Animal("cat", "LeLe"));
+			animalShelter.Enqueue(new Animal("dog", "pepo"));
+			animalShelter.Enqueue(new Animal("cat", "Lolo"));
+			animalShelter.Enqueue(new Animal("cat", "Fefe"));
+			animalShelter.Enqueue(new Animal("dog", "Neno"));
+			// Act
+			Animal animal = animalShelter.Dequeue("dog");
+			string name = animal.Name;
+			;           // Assert
+			Assert.Equal(name, "pepo");
+		}
 
 	} } 
