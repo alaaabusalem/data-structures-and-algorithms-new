@@ -24,4 +24,6 @@ I finished the PseudoQueue Class with a Unit test successfully.
 # CC 12 AnimalShelter
 I finished the AnimalShelter Class with a Unit test successfully.
 
+![1](CC-12-1.jpg)
 
+![2](CC-12-2.jpg)
