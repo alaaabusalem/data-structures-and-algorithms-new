@@ -257,5 +257,40 @@ namespace Test_stack_and_queue
 			;           // Assert
 			Assert.Equal(name, "pepo");
 		}
+		/// CC 13
 
+		[Fact]
+
+		void TestMethodBracketsTester1()
+		{
+			// Arrange
+
+			// Act
+			bool result = Program.validateBrackets("{}(){}");
+			;           // Assert
+			Assert.Equal(true, result);
+		}
+
+		[Fact]
+
+		void TestMethodBracketsTester2()
+		{
+			// Arrange
+
+			// Act
+			bool result = Program.validateBrackets("()[[Extra Characters]]");
+			;           // Assert
+			Assert.Equal(true, result);
+		}
+
+		[Fact]
+		void TestMethodBracketsTester3()
+		{
+			// Arrange
+
+			// Act
+			bool result = Program.validateBrackets("[({}]");
+			;           // Assert
+			Assert.Equal(false, result);
+		}
 	} } 

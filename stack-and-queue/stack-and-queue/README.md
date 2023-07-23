@@ -27,3 +27,9 @@ I finished the AnimalShelter Class with a Unit test successfully.
 ![1](CC-12-1.jpg)
 
 ![2](CC-12-2.jpg)
+
+# CC 13 validate brackets
+I finished the validateBrackets Method in the Program class with a three successful unit test methods.
+![1](CC13-1.jpg)
+
+![2](CC13-2.jpg)

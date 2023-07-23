@@ -1,6 +1,8 @@
-﻿namespace stack_and_queue
+﻿using System.Reflection.Metadata.Ecma335;
+
+namespace stack_and_queue
 {
-	internal class Program
+	public class Program
 	{
 		static void Main(string[] args)
 		{
@@ -53,8 +55,57 @@
 			pseudoQueue.Dequeue();
 			pseudoQueue.Print();
 
-
+			///
+			Console.WriteLine("CC 13");
+			bool result = validateBrackets("{}(){}");
+			Console.WriteLine(result);
+			result = validateBrackets("()[[Extra Characters]]");
+			Console.WriteLine(result);
+			result = validateBrackets("[({}]");
+			Console.WriteLine(result);
+			result = validateBrackets("{(})");
+			Console.WriteLine(result);
 
 		}
+
+		public static bool validateBrackets(string statement)
+		{
+			if (statement != null)
+			{
+				stack_and_queue.Queue<char> queue = new stack_and_queue.Queue<char>();
+				stack_and_queue.Stack<char> stack = new stack_and_queue.Stack<char>();
+				foreach (char s in statement)
+				{
+					
+					if (s == '(' || s == ')' || s == '[' || s == ']' || s == '{' || s == '}')
+					{
+						queue.Enqueue(s);
+					}
+				}
+					while (queue.count > 0)
+					{
+						char deque = queue.Dequeue();
+						if (deque == '(' || deque == '[' || deque == '{')
+						{
+							stack.Push(deque);
+						}
+						else
+						{
+							if (stack.count == 0) { return false; }
+							else
+							{
+								char pop = stack.Pop();
+							if ((deque == ')' && pop == '(') || (deque == ']' && pop == '[') || (deque == '}' && pop == '{')) { continue; }
+							else { return false; }
+							}
+
+
+						}
+					}
+				return true;
+			}
+			return false;
+		}
+			
+		}
 	}
-}
