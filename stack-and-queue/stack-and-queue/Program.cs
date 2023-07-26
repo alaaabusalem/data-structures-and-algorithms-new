@@ -66,6 +66,8 @@ namespace stack_and_queue
 			result = validateBrackets("{(})");
 			Console.WriteLine(result);
 
+			
+
 		}
 
 		public static bool validateBrackets(string statement)
@@ -106,6 +108,9 @@ namespace stack_and_queue
 			}
 			return false;
 		}
-			
+			//CC 14
+	
+
+
 		}
 	}
