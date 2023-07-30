@@ -5,7 +5,7 @@ VisualStudioVersion = 17.6.33801.468
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "stack-and-queue", "stack-and-queue\stack-and-queue.csproj", "{42FDA174-175C-4764-BC3B-200081878AF8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test-stack-and-queue", "Test-stack-and-queue\Test-stack-and-queue.csproj", "{7596F5A8-F65E-418A-B615-1D2594D9813F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test-stack-and-queue", "Test-stack-and-queue\Test-stack-and-queue.csproj", "{7596F5A8-F65E-418A-B615-1D2594D9813F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
