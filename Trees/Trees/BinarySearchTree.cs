@@ -52,6 +52,20 @@ namespace Trees
 			return false;
 
 		}
+		public T MaxValue()
+		{
+			//if (Root == null) return null;
+			Node<T> pointer = Root;
+			T Max = Root.Value;
+			pointer = Root.Right;
+			while (pointer != null) {
+				if (pointer.Right == null) ;
+				Max=pointer.Value;
+				pointer=pointer.Right;
+			}
 
+			return Max;	
+
+		}
 	}
 }
