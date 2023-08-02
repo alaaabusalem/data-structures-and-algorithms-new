@@ -137,5 +137,24 @@ namespace TestTree
 			// Assert
 			Assert.Equal("20,40,30,60,70,50", resultString);
 		}
+
+		[Fact]
+		void TestMaxValue()
+		{
+			// Arrange
+			BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
+			binarySearchTree.Add(50);
+			binarySearchTree.Add(30);
+			binarySearchTree.Add(70);
+			binarySearchTree.Add(20);
+			binarySearchTree.Add(40);
+			binarySearchTree.Add(60);
+
+			// Act
+
+			int Max = binarySearchTree.MaxValue();	
+			// Assert
+			Assert.Equal(70, Max);
+		}
 	}
 }
