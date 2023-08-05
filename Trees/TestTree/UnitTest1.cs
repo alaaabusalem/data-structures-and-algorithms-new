@@ -156,5 +156,25 @@ namespace TestTree
 			// Assert
 			Assert.Equal(70, Max);
 		}
+
+		[Fact]
+		void TestBreadthFirst()
+		{
+			// Arrange
+			BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
+			binarySearchTree.Add(50);
+			binarySearchTree.Add(30);
+			binarySearchTree.Add(70);
+			binarySearchTree.Add(20);
+			binarySearchTree.Add(40);
+			binarySearchTree.Add(60);
+
+			// Act
+
+			 List<int> list = binarySearchTree.BreadthFirst();
+			string answer = binarySearchTree.PrintBreadthFirst(list);
+			// Assert
+			Assert.Equal(answer, "50,30,70,20,40,60,null");
+		}
 	}
 }

@@ -67,5 +67,50 @@ namespace Trees
 			return Max;	
 
 		}
+
+		public List<T> BreadthFirst()
+		{
+			//if (Root == null) return null;
+			Node<T> pointer = Root;
+			List<T> list = new List<T>();
+			list.Add(pointer.Value);	
+			Queue<Node<T>> queue = new Queue<Node<T>>();
+			queue.Enqueue(pointer);	
+			while (queue.Count !=0) {
+				if (queue != null)
+				{
+					Node<T> node = queue.Dequeue();
+
+					if (node.Left != null)
+					{
+						queue.Enqueue(node.Left);
+						list.Add(node.Left.Value);
+					}
+
+					if (node.Right != null)
+					{
+						queue.Enqueue(node.Right);
+						list.Add(node.Right.Value);
+					}
+				}
+			}
+			
+		  return list;	
+					
+
+			}
+			 
+		     public string PrintBreadthFirst(List<T> list)
+		{
+			string answer = "";
+			foreach (var item in list)
+			{
+				answer += $"{item},";
+			}
+			answer += "null";
+			return answer;
+		}
+
+		}
 	}
-}
+
