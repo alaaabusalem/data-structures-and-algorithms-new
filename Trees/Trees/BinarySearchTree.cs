@@ -111,6 +111,41 @@ namespace Trees
 			return answer;
 		}
 
+		public BinarySearchTree<string> FizzBuzz(BinarySearchTree<int> tree)
+		{
+			
+			//Node<int> pointer = tree.Root;
+			BinarySearchTree<string> fizzbuzz = new BinarySearchTree<string>();
+			List<int> list = tree.BreadthFirst();
+			
+			foreach(var item in list)
+			{
+				if ((item) % 3 == 0 && (item) % 5 == 0)
+				{
+					fizzbuzz.Add("FizzBuzz");
+					
+				}
+
+				else if (item % 3 == 0)
+				{
+
+					fizzbuzz.Add("Fizz");
+					
+				}
+				else if (item % 5 == 0)
+				{
+
+					fizzbuzz.Add("Buzz");
+				
+				}
+				else { fizzbuzz.Add($"{item}"); }
+
+			}
+			
+			return fizzbuzz;
+
 		}
+
+	}
 	}
 

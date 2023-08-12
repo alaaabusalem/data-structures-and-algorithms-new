@@ -176,5 +176,28 @@ namespace TestTree
 			// Assert
 			Assert.Equal(answer, "50,30,70,20,40,60,null");
 		}
+
+		[Fact]
+		void TestFizzBuzz()
+		{
+			// Arrange
+			BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
+			binarySearchTree.Add(50);
+			binarySearchTree.Add(30);
+			binarySearchTree.Add(70);
+			binarySearchTree.Add(20);
+			binarySearchTree.Add(40);
+			binarySearchTree.Add(60);
+
+			// Act
+
+			BinarySearchTree<string> fizzbuzz = binarySearchTree.FizzBuzz(binarySearchTree);
+			
+
+			string resultString = string.Join(",", fizzbuzz.PreOrderTravarsel());
+
+			// Assert
+			Assert.Equal("Buzz,FizzBuzz,Buzz,Buzz,Buzz,FizzBuzz", resultString);
+		}
 	}
 }

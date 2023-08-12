@@ -4,8 +4,6 @@
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
-			//BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
 			BinarySearchTree<int> binarySearchTree = new BinarySearchTree<int>();
 			binarySearchTree.Add(50);
 			binarySearchTree.Add(30);
@@ -16,9 +14,13 @@
 
 			// Act
 
-			List<int> list = binarySearchTree.BreadthFirst();
-			
-			Console.WriteLine(binarySearchTree.PrintBreadthFirst(list));
+			BinarySearchTree<string> fizzbuzz = binarySearchTree.FizzBuzz(binarySearchTree);
+
+
+			List<string> list  = fizzbuzz.PostorderTraversal();
+			string resultString = fizzbuzz.PrintBreadthFirst(list);
+			Console.WriteLine(resultString);
+
 		}
 	}
 }
